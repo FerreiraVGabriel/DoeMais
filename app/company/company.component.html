@@ -1,0 +1,33 @@
+
+<GridLayout class="page">
+	<ScrollView #scrollView (scroll)="onScroll($event, scrollView, topView)">
+		<StackLayout>
+			<StackLayout #topView height="250" style="background-image: url('~/assets/images/higher.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover;">
+			</StackLayout>
+			<StackLayout width="100%" backgroundColor="white" padding="10">
+				<Label textWrap="true" text="Quem somos" class="h2 description-label"></Label>
+				<Label textWrap="true" class="p-10" text=" 	A Higher é uma empresa especializada no desenvolvimento de aplicativos mobile na plataforma Android, criada em 2011 em Belo Horizonte, com um time de profissionais altamente qualificados, a empresa atende todo o Brasil com soluções modernas que transformam as ideias dos clientes em aplicativos práticos, funcionais e intuitivos.
+				Entre seus cases de sucesso estão aplicativos desenvolvidos para empresas líderes do mercado nacional, como: Ultra Carro, Academia Jardim, Chaves na Mão, Unint, RAKKO, e STG pactual digital."></Label>
+				<Label textWrap="true" text="História" class="h2 description-label"></Label>
+				<Label textWrap="true" class="p-10" text=" A Higher foi criada em 2011 pelo mineiro Guilherme Benfica, que após atuar em uma empresa de tecnologia mobile, decidiu abrir seu próprio negócio. Foram três anos trabalhando em casa até conquistar capital para montar um escritório formal. A mudança acompanhou a explosão do mercado de aplicativos em 2014. Assim, a Higher mudou-se para uma sala comercial no centro de Belo Horizonte (MG), onde aumentou a equipe e ganhou visibilidade no mercado tecnológico."></Label>
+				<Label textWrap="true" text="Por que uma Empresa de Desenvolvimento de Aplicativos?" class="h2 description-label"></Label>
+				<Label textWrap="true" class="p-10" text="Atualmente, os aplicativos mobile estão dominando o mercado tecnológico e a tendência é o mercado crescer cada vez mais. Um aplicativo tem funções que facilitam a sua vida onde quer que você esteja. A Higher é uma empresa de desenvolvimento de aplicativos a qual foca projetos de qualidade, responsabilidade e design moderno. Nossa maior meta é realizar as ideias de nossos clientes em tecnologia mobile, para que assim, seus objetivos sejam alcançados de forma inteligente e descomplicada, proporcionando satisfação e resultados. 
+				Na Higher, o desenvolvimento de aplicativos mobile é realizado de forma inteligente e descomplicada, buscando a satisfação e acima de tudo resultados positivos para os negócios de seus clientes. Seu foco é a Experiência do Usuário. E sua política de qualidade garante alta qualidade e técnica nos produtos desenvolvidos, além de comprometimento, respeito e ética com os clientes."></Label>
+                <Button style="color: #bd2122;"
+                text="EQUIPE" 
+                (tap)="showEmployee()" 
+                class="btn">
+            </Button>
+			</StackLayout>
+		</StackLayout>
+	</ScrollView>
+</GridLayout>
+
+
+
+
+
+
+
+
+

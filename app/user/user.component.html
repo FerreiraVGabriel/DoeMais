@@ -1,0 +1,90 @@
+<!-- <ActionBar title="Informações do Usuário" class="top"></ActionBar>
+<StackLayout>
+    <ScrollView>
+      <ListView [items]="user" separatorColor="transparent">
+        <ng-template let-item="item"> 
+          <StackLayout>
+            <Image src="~/assets/images/Albus_Dumbledore.jpg" height="140" width="140" borderRadius="70" class="skeleton-light"
+            margin="20 10" horizontalAlignment="center"></Image>
+        <GridLayout padding="0 10 10">
+            <StackLayout  padding="0 3">
+                <GridLayout columns="*,*">
+                    <Label text="Número de doações: 1" class="center" height="50" width="100%" col="0" row="0" borderRadius="5" borderWidth="1" borderColor="#FF0000" ></Label>
+                    <Label text="Dinheiro doado: R$ 10,00" class="center" height="50" width="100%" col="1" row="0" borderRadius="5" borderWidth="1" borderColor="#FF0000"></Label>
+                </GridLayout>
+            </StackLayout>
+        </GridLayout>
+        <Label text="Detalhes das Doações" class="center" height="50" width="100%" ></Label>
+
+        <StackLayout orientation="vertical" style="background-color: #fff; margin:9; border-radius: 10px; border-color: #FF0000; border-width: 1">
+            <StackLayout orientation="horizontal">
+              <StackLayout orientation="vertical" style="padding:10;" tap="tapAluno"> 
+                <Label [text]="categoryIcon(item.Tipo)"  stretch="fill" borderRadius="45" width="90" height="90" [backgroundColor]="item.TipoTag" class="fa category-icon">
+                </Label>
+                <Label text="tipo" textWrap="true" horizontalAlignment="center" color="#FF0000" ></Label>
+              </StackLayout>
+              <StackLayout orientation="vertical" verticalAlignment="center">
+                <GridLayout columns="*" rows="auto,*,auto">
+                  <StackLayout tap="tapAluno"  orientation="horizontal" col="0" row="0" horizontalAlignment="left" margin="7">
+                    <Label text="Intituição:" horizontalAlignment="center" verticalAlignment="center" margin="7"></Label>
+                    <Label  [text]="item.Instituicao" verticalAlignment="center" color="#FF0000" horizontalAlignment="center" ></Label>
+                  </StackLayout>
+                  <StackLayout orientation="horizontal" col="0" row="1" horizontalAlignment="left" margin="7">
+                    <Label text="Valor:" horizontalAlignment="center" verticalAlignment="center" margin="7"></Label>
+                    <Label  [text]="item.Valor" verticalAlignment="center" color="#FF0000" horizontalAlignment="center" ></Label>
+                  </StackLayout>
+                  <StackLayout orientation="horizontal" col="0" row="2" horizontalAlignment="left" margin="7">
+                    <Label text="Data:" horizontalAlignment="center" verticalAlignment="center" margin="7"></Label>
+                    <Label  [text]="item.Data" verticalAlignment="center" color="#FF0000" horizontalAlignment="center" ></Label>
+                  </StackLayout>
+                </GridLayout>
+              </StackLayout>
+            </StackLayout>
+        </StackLayout>   
+      </StackLayout>
+        </ng-template>
+      </ListView>
+    </ScrollView>
+</StackLayout>
+
+
+ -->
+ <ActionBar title="Perfil do Usuário" class="top" style="color: rgb(249, 249, 249);"></ActionBar>
+ <StackLayout>
+  <!-- <Label height="120" margin="5 0" width="100%" class="skeleton-light"></Label> -->
+  <Label [text]="welcome" class="center" height="50" width="100%" col="0" row="0" borderRadius="5" borderWidth="1" borderColor="#FF0000" ></Label>
+  <Label [text]="numDoacao" class="center" height="50" width="100%" col="0" row="0" borderRadius="5" borderWidth="1" borderColor="#FF0000" ></Label>
+  <Label [text]="valor" class="center" height="50" width="100%" col="1" row="0" borderRadius="5" borderWidth="1" borderColor="#FF0000"></Label>
+  <ListView class="list-group" [items]="userNow" style="height:100%">
+      <ng-template let-item="item" >
+          <FlexboxLayout flexDirection="row">
+              <GridLayout rows="*, *, *" columns="100, *, 10" borderRadius="5" borderWidth="1" borderColor="#FF0000" 
+                  height="120" padding="10 0">
+                  <StackLayout row="0" rowSpan="3" col="0" >
+                      <Label [text]="categoryIcon(item.Tipo)"  stretch="fill" borderRadius="45" width="60" height="60" [backgroundColor]="item.TipoTag" class="fa category-icon">
+                      </Label>
+                      <Label [text]="item.Tipo" textWrap="true" horizontalAlignment="center" color="#FF0000" ></Label>
+                    </StackLayout>
+                  <StackLayout orientation="horizontal" row="0" col="1" height="20"
+                      width="80%" verticalAlignment="center"
+                      horizontalAlignment="left" borderRadius="5">
+                      <Label text="Intituição:" ></Label>
+                      <Label  [text]="item.Instituicao"  color="#FF0000" ></Label>  
+                    </StackLayout>
+                    <StackLayout orientation="horizontal" row="1" col="1" height="20"
+                    width="80%" verticalAlignment="center"
+                    horizontalAlignment="left" borderRadius="5">
+                    <Label text="Data:" ></Label>
+                    <Label  [text]="item.Data"  color="#FF0000" ></Label>  
+                  </StackLayout>
+                  <StackLayout orientation="horizontal" row="2" col="1" height="20"
+                    width="80%" verticalAlignment="center"
+                    horizontalAlignment="left" borderRadius="5">
+                    <Label text="Valor:" ></Label>
+                    <Label  [text]="item.Dinheiro"  color="#FF0000" ></Label>  
+                  </StackLayout>
+              </GridLayout>
+          </FlexboxLayout>
+      </ng-template>
+  </ListView>
+</StackLayout>

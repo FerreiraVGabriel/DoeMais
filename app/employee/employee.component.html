@@ -1,0 +1,59 @@
+<ActionBar title="Equipe" class="top" style="color: rgb(249, 249, 249);"></ActionBar>
+<!-- <StackLayout>
+    <ListView [items]="employee" separatorColor="transparent">
+        <ng-template let-item="item">   
+            <StackLayout orientation="vertical" style="background-color: #fff; margin:9; border-radius: 10px; border-color: #FF0000; border-width: 1">
+                <StackLayout orientation="horizontal">
+                    <StackLayout orientation="vertical" style="padding:10;" tap="tapAluno"> 
+                      <Image [src]="item.foto" row="0" rowSpan="2" col="0" class="skeleton-dark"
+                      height="85" width="85" verticalAlignment="center"
+                      horizontalAlignment="center" borderRadius="5" ></Image>
+                      <Label [text]="item.cargo" textWrap="true" horizontalAlignment="center" color="#FF0000" ></Label>
+                    </StackLayout>
+                    <StackLayout orientation="vertical" verticalAlignment="center">
+                      <GridLayout columns="*" rows="auto,*,auto">
+                        <StackLayout tap="tapAluno"  orientation="horizontal" col="0" row="0" horizontalAlignment="left" margin="7">
+                          <Label text="Data de Contratação:" horizontalAlignment="center" verticalAlignment="center" margin="7"></Label>
+                          <Label  [text]="item.data" verticalAlignment="center" color="#FF0000" horizontalAlignment="center" ></Label>
+                        </StackLayout>
+                        <StackLayout tap="tapAluno"  orientation="horizontal" col="0" row="1" horizontalAlignment="left" margin="7">
+                          <Label text="Nome:" horizontalAlignment="center" verticalAlignment="center" margin="7"></Label>
+                          <Label  [text]="item.nome" verticalAlignment="center" color="#FF0000" horizontalAlignment="center" ></Label>
+                        </StackLayout>
+                        <StackLayout tap="tapAluno"  orientation="horizontal" col="0" row="2" horizontalAlignment="left" margin="7">
+                            <Label text="Valor:" horizontalAlignment="center" verticalAlignment="center" margin="7"></Label>
+                            <Label  textWrap="true" [text]="item.descricao" class=" description-label" verticalAlignment="center" color="#FF0000" horizontalAlignment="center" ></Label>
+                        </StackLayout>
+                      </GridLayout>
+                    </StackLayout>
+                  </StackLayout>
+            </StackLayout>
+        </ng-template>
+    </ListView>
+</StackLayout> -->
+
+
+
+<ListView [items]="employee" separatorColor="transparent">
+  <ng-template let-item="item">                
+      <StackLayout>
+          <GridLayout rows="*" backgroundColor="White">
+              <GridLayout rows="*" columns="*">
+                  <Image [src]="item.foto" stretch="aspectFill"
+                      height="200"></Image>
+                  <GridLayout verticalAlignment="top">
+                      <StackLayout backgroundColor="#bc3b4e77">
+                          <Label [text]="item.nome" class="news-source"></Label>
+                          <Label [text]="item.cargo" class="news-source"></Label>
+                      </StackLayout>
+                  </GridLayout>
+              </GridLayout>
+          </GridLayout>
+          <StackLayout paddingTop="15" paddingBottom="20" paddingLeft="15"
+              paddingRight="15" backgroundColor="White">
+              <Label [text]="item.descricao" class="news-title"
+                  textWrap="true"></Label>
+          </StackLayout>
+      </StackLayout>
+  </ng-template>
+</ListView>

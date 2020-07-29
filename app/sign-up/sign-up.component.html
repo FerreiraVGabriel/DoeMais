@@ -1,0 +1,87 @@
+<ActionBar title="Criação de Conta" class="action-bar"></ActionBar>
+
+<GridLayout row="0" rows="auto, auto, auto" >
+    <stackLayout class="form">
+        <stackLayout class="input-field">
+            <label  style="color: #bd2122;"
+                text="Nome"   
+                class=" label font-weight bold m-b-5">
+            </label>
+            <TextField 
+                #name 
+                row="1" 
+                class="eloha-font-semibold login-input-field"
+                android:style="padding-left: 10"
+                hint="nome" 
+                autocorrect="false"
+                autocapitalizationType="none" >
+            </TextField>
+        </stackLayout> 
+        <stackLayout class="input-field">
+            <label  style="color: #bd2122;"
+                text="Sobrenome"   
+                class=" label font-weight bold m-b-5">
+            </label>
+            <TextField 
+                #lastName 
+                row="1" 
+                class="eloha-font-semibold login-input-field"
+                android:style="padding-left: 10"
+                hint="Sobrenome" 
+                autocorrect="false"
+                autocapitalizationType="none" >
+            </TextField>
+        </stackLayout> 
+        <stackLayout class="input-field">
+            <label  style="color: #bd2122;"
+                text="Email"   
+                class=" label font-weight bold m-b-5">
+            </label>
+            <TextField 
+                #email 
+                row="1" 
+                class="eloha-font-semibold login-input-field"
+                android:style="padding-left: 10"
+                hint="nome@exemplo.com" 
+                keyboardType="email"
+                autocorrect="false"
+                autocapitalizationType="none" >
+            </TextField>
+        </stackLayout>  
+        <stackLayout class="form">
+            <stackLayout class="input-field">
+                    <label style="color: #bd2122;"
+                        text="Senha" 
+                        class=" label font-weight bold m-b-5">
+                    </label>
+                    <TextField 
+                        #password 
+                        col="0" 
+                        class="eloha-font-semibold login-input-field"
+                        hint="Senha" 
+                        android:style="padding-left: 10"
+                        secure="true" >
+                    </TextField>
+            </stackLayout>
+            <stackLayout class="input-field">
+                <label style="color: #bd2122;"
+                    text="Confirmar Senha" 
+                    class=" label font-weight bold m-b-5">
+                </label>
+                <TextField 
+                    #confirmPassword 
+                    col="0" 
+                    class="eloha-font-semibold login-input-field"
+                    hint="Confirmar Senha" 
+                    android:style="padding-left: 10"
+                    secure="true" >
+                </TextField>
+        </stackLayout>
+            <Button 
+                row="2" 
+
+                class="eloha-font-semibold login-submit font-size-lg"
+                text="Criar uma Conta"  
+                (tap)="cadastrar()" >
+            </Button>
+    </stackLayout>

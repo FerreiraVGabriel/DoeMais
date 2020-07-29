@@ -1,0 +1,58 @@
+
+ <ActionBar title="Entrar na Conta" class="action-bar"></ActionBar>
+
+<stackLayout class="page">
+
+    <Image  src="~/assets/images/doemais.jpg" height="250" height="250"></Image>
+    
+
+    <GridLayout row="0" rows="auto, auto, auto" >
+        <stackLayout class="form">
+            <stackLayout class="input-field">
+                <label  style="color: #bd2122;"
+                    text="Email"   
+                    class=" label font-weight bold m-b-5">
+                </label>
+                <TextField 
+                    #email 
+                    row="1" 
+                    class="eloha-font-semibold login-input-field"
+                    android:style="padding-left: 10"
+                    hint="nome@exemplo.com" 
+                    keyboardType="email"
+                    autocorrect="false"
+                    autocapitalizationType="none" >
+                </TextField>
+            </stackLayout> 
+            <stackLayout class="form">
+                <stackLayout class="input-field">
+                        <label style="color: #bd2122;"
+                            text="Senha" 
+                            class=" label font-weight bold m-b-5">
+                        </label>
+                        <TextField 
+                            #password 
+                            col="0" 
+                            class="eloha-font-semibold login-input-field"
+                            hint="Senha" 
+                            android:style="padding-left: 10"
+                            secure="true" 
+                            [(ngModel)]="user.password">
+                        </TextField>
+                </stackLayout>
+                <Button style="color: #bd2122;"
+                    row="2" 
+                    class="btn btn-outline-danger"
+                    text="ENTRAR"
+                    (tap)="login()">
+                </Button>
+                <button style="color: #bd2122;"
+                    class="btn btn-outline-danger"
+                    text="Criar uma Conta"  
+                    (tap)="criarConta()" >
+                </button>
+                
+        </stackLayout>
+</stackLayout>
+
+

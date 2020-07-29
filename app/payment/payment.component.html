@@ -1,0 +1,95 @@
+<!-- <ActionBar title="Compose Email Message" class="action-bar">
+</ActionBar> -->
+
+<!-- <ScrollView>
+    <StackLayout>
+        <GridLayout rows="*, *, *, *, *" columns="80, *" class="form">
+            <Label row="0" col="0" text="To:" horizontalAlignment="right"
+                class="label"></Label>
+            <TextField row="0" col="1" [(ngModel)]="toEmail" hint="to email address(es)"
+                class="input input-border" keyboardType="email"></TextField>
+            <Label row="1" col="0" text="CC:" horizontalAlignment="right"
+                class="label"></Label>
+            <TextField row="1" col="1" [(ngModel)]="ccEmail" hint="cc email address(es)"
+                class="input input-border" keyboardType="email"></TextField>
+            <Label row="2" col="0" text="BCC:" horizontalAlignment="right"
+                class="label"></Label>
+            <TextField row="2" col="1" [(ngModel)]="bccEmail" hint="bcc email address(es)"
+                class="input input-border" keyboardType="email"></TextField>
+            <Label row="3" col="0" text="Subject:" horizontalAlignment="right"
+                class="label"></Label>
+            <TextField row="3" col="1" [(ngModel)]="subject" hint="compose email subject"
+                class="input input-border"></TextField>
+            <Label row="4" col="0" text="Message:" horizontalAlignment="right"
+                class="label"></Label>
+            <TextField row="4" col="1" [(ngModel)]="message" hint="compose email message"
+                class="input input-border"></TextField>
+        </GridLayout>
+        <Button text="Send Email" (tap)="onEmailSend($event)" class="btn btn-primary"></Button>
+    </StackLayout>
+</ScrollView> -->
+<StackLayout class="main" verticalAlignment="top">
+    <GridLayout  rows="auto" columns="*">
+        <Image row="0" col="0" marginTop="0" height="200" stretch="aspectFill"
+            class="card-img" src="~/assets/images/cartao/pagseguro.png"></Image>
+        <Label row="0" col="0" verticalAlignment="top" horizontalAlignment="left"
+            (tap)="onCloseTap()" fontSize="24" text="&#xf060;" class="fa close">
+        </Label>
+    </GridLayout>
+
+    <ScrollView>
+        <StackLayout>
+            <GridLayout rows="*, *, *, *, *" columns="400, *" class="form">
+                <MaskedTextField #valor row="0" col="0" hint="Valor Doação" mask="R$ 99.999" keyboardType="number"
+                class="input input-border"></MaskedTextField>
+            </GridLayout>
+            <GridLayout rows="*, *, *, *, *" columns="400, *" class="form">
+                <TextField #numcartao row="0" col="0" hint="Número do cartão" keyboardType="number"
+                class="input input-border"></TextField>
+            </GridLayout>
+            <GridLayout rows="*, *, *, *, *" columns="200, *" class="form">  
+                <MaskedTextField 
+                    #validade
+                    row="0" 
+                    col="0" 
+                    hint="Validade" 
+                    class="input input-border" 
+                    mask="99/99" 
+                    keyboardType="number">
+                </MaskedTextField>
+                <MaskedTextField 
+                    #cvv
+                    row="0" 
+                    col="1" 
+                    hint="CVV" 
+                    class="input input-border" 
+                    mask="999" 
+                    keyboardType="number">
+                </MaskedTextField>
+            </GridLayout>
+            <GridLayout rows="*, *, *, *, *" columns="400, *" class="form">
+                <TextField 
+                    #nome
+                    row="0" 
+                    col="0" 
+                    hint="Nome do Titular"
+                    class="input input-border">
+                </TextField>
+            </GridLayout>
+            <GridLayout rows="*, *, *, *, *" columns="400, *" class="form">
+                <MaskedTextField 
+                    #cpf
+                    hint="CPF" 
+                    class="input input-border" 
+                    mask="999.999.999-99" 
+                    keyboardType="number">
+                </MaskedTextField>
+            </GridLayout>
+            <Button 
+                text="DOAR" 
+                (tap)="openModal()" 
+                class="btn">
+            </Button>
+        </StackLayout>
+    </ScrollView> 
+</StackLayout>
